@@ -1,0 +1,47 @@
+.navbar {
+    height: 70px;
+    background-color: #4f963c !important;
+    width: 100%;
+  }
+  .MuiTypography-h6 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff; 
+  }
+  .MuiIconButton-root {
+    color: #ffffff;
+  }
+  
+  .iconButtonNav{
+    border: 2px solid #fff !important;
+    background-color: #fff !important;
+    border-radius: 7px !important;
+    height: 45px !important;
+  }
+
+  .iconButtonNav > button{
+    color: black !important;
+  }
+
+  .navbarContent{
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+  }
+
+  .rightSide{
+    display: flex;
+    align-items: center;
+    width: 10%;
+    justify-content: space-between
+  }
+
+  .profileIcon{
+    font-size: xxx-large !important;
+  }
+
+  .logoImage{
+    height: 75px;
+    /* width: 250px; */
+  }

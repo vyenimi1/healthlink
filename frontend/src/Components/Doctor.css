@@ -1,0 +1,23 @@
+.table-container {
+    width: 80% !important;
+    max-height: 80vh;
+    margin: 80px auto;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    overflow: auto;
+  }
+  .table-row:nth-of-type(even) {
+    background-color: #f9f9f9 !important;
+  }
+  .action-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+  }
+  .action-icons button:hover {
+    background-color: #f0f0f0 !important;
+  }
+  
+  .addDoctors{
+    float: right !important;
+  }

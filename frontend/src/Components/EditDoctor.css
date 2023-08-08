@@ -1,0 +1,61 @@
+/* EditModal.css */
+
+/* Styles for the dialog title */
+.MuiDialogTitle-root {
+    background-color: #337b24; /* Change the background color */
+    color: #fff; /* Change the text color */
+  }
+  
+  /* Styles for the dialog content */
+  .MuiDialogContent-root {
+    padding: 20px;
+  }
+  
+  /* Styles for the form fields */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Styles for the text fields */
+  .MuiFormControl-root {
+    width: 100%;
+  }
+  
+  /* Styles for the buttons in the dialog actions */
+  .MuiDialogActions-root {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Styles for the "Save Changes" button */
+  .MuiButton-containedPrimary {
+    background-color: #337b24; /* Change the background color */
+    color: #fff; /* Change the text color */
+    font-weight: bold;
+  }
+  
+  /* Styles for the "Cancel" button */
+  .MuiButton-text {
+    color: #337b24; /* Change the text color */
+  }
+
+  .MuiDialogContent-root {
+    padding: 20px;
+    overflow: auto; /* Enable scrolling */
+  }
+  
+  /* Hide the scrollbar */
+  .MuiDialogContent-root::-webkit-scrollbar {
+    width: 0.5em;
+  }
+  
+  .MuiDialogContent-root::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0); /* Make the scrollbar thumb transparent */
+  }
+
+  .addDoctor{
+    margin-top: 30px;
+  }

@@ -1,0 +1,76 @@
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .gridButtons{
+    display: flex;
+    justify-content: center;
+  }
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    width: 500px;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .item1{
+    background: linear-gradient(135deg, #FFC371 30%, #FF5F6D 100%);
+  }
+
+  .item2{
+    background: linear-gradient(135deg, #65CCF3 30%, #3495FF 100%);
+  }
+
+  .item3{
+    background: linear-gradient(135deg, #9ACD32 30%, #32CD32 100%)
+  }
+
+  .homeButtons{
+    background: #fff !important;
+    padding: 10px 20px 5px 20px !important;
+  }
+  
+  .grid-item h2{
+    margin: 0;
+    font-size: 24px;
+    color: #ffffff;
+  }
+
+  .grid-item p {
+    margin: 0;
+    font-size: 17px;
+    color: #ffffff;
+  }
+  
+  .arrow-icon {
+    margin-bottom: 8px;
+    color: #000000;
+  }
+  
+  .button-text {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 5px;
+  }
+  
+  .button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button-wrapper .arrow-icon {
+    margin-left: 8px;
+  }
+  

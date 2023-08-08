@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #D9ffbf;
+}
+
+.MuiButton-containedPrimary {
+  background-color: #337b24 !important; /* Change the background color */
+  color: #fff; /* Change the text color */
+  font-weight: bold;
+  margin: 10px !important;
+}
+
+.signup-form .MuiButton-containedPrimary:hover {
+  background-color: #fff !important;
+  border: 2px solid #337b24 !important;
+  color: #337b24 !important;
+  font-weight: 700 !important;
+}

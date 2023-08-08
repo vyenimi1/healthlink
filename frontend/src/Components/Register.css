@@ -1,0 +1,47 @@
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #D9ffbf;
+  }
+  
+  .signup-form {
+    width: 60%;
+    max-height: 85vh;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+
+  .signup-form > h2 {
+    text-align: center;
+    margin: 0 0 20px 0 !important;
+  }
+  
+  .signup-form form {
+    width: 100%;
+  }
+  
+  .signup-form .MuiGrid-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .signup-form .MuiTextField-root {
+    margin-bottom: 10px;
+  }
+  
+  .signup-form .MuiButton-containedPrimary {
+    background-color: #337b24;
+    color: #fff;
+  }
+  
+  .signup-form .MuiButton-containedPrimary:hover {
+    background-color: #fff;
+    border: 2px solid #337b24;
+    color: #337b24;
+    font-weight: 700;
+  }
+  
