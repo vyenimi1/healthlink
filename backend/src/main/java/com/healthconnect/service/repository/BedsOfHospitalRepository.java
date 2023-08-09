@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BedsOfHospitalRepository extends JpaRepository<HospitalBeds, Long> {
+
+    HospitalBeds findByHospitalId(Long hospitalId);
+
 }

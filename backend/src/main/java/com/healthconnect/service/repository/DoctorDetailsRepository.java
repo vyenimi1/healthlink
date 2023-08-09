@@ -10,5 +10,9 @@ import java.util.List;
 @Repository
 public interface DoctorDetailsRepository extends JpaRepository<DoctorDetails, Long> {
 
+
+    DoctorDetails findByDoctorId(Long doctorId);
+
     List<DoctorDetails> findAllByHospitalId(Long hospitalId);
+
 }

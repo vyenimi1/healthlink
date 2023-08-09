@@ -9,6 +9,7 @@ public class HospitalResponse {
     private Long hospitalId;
     private String name;
     private String street;
+    private String password;
     private Long zipCode;
     private String city;
     private String state;

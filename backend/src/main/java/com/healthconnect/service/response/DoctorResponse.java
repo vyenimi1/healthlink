@@ -17,4 +17,5 @@ public class DoctorResponse {
     private String languagesKnown;
     private String consultationHours;
     private String availabilityDays;
+
 }

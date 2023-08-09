@@ -11,6 +11,6 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
   datasource:
-    url: jdbc:mysql://localhost:3306/abc
+    url: jdbc:mysql://localhost:3306/test
     username: root
     password: Password@MySQL
