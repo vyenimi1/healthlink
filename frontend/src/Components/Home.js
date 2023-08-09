@@ -2,12 +2,26 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-
 import './Home.css';
 import Navbar from './Navbar';
-import { LoginHostipal } from '../Services/HospitalServices';
+import { useNavigate, useParams } from 'react-router-dom';
 
 function Home() {
+
+  const {hospitalId} = useParams();
+  const navigate = useNavigate();
+
+  const handleDoctorClick = () =>{
+    navigate("/doctor/"+hospitalId);
+  }
+
+  const handleBedsClick = () =>{
+    navigate("/beds/"+hospitalId);
+  }
+
+  const handleBedAvlClick = () =>{
+    navigate("/beds-avail/"+hospitalId);
+  }
 
   return (
     <div className="home-container">
@@ -20,7 +34,7 @@ function Home() {
               <h2>Doctor</h2>
               <p>Click on the "Doctors" button to explore our team of experienced and dedicated medical professionals. Our doctors are committed to providing the best care and medical expertise to ensure your well-being.</p>
               <div className="button-wrapper">
-                <Button className='homeButtons'>
+                <Button className='homeButtons' onClick={handleDoctorClick}>
                   <span className="button-text">Click</span>
                   <ArrowForwardIcon className="arrow-icon" />
                 </Button>
@@ -34,7 +48,7 @@ function Home() {
               <h2>Number Of Beds</h2>
               <p>Need to check the availability of beds in our facility? Click on the "Number of Beds" button to get real-time information about our available bed count and make informed decisions for your healthcare needs.</p>
               <div className="button-wrapper">
-                <Button className='homeButtons'>
+                <Button className='homeButtons' onClick={handleBedsClick}>
                   <span className="button-text">Click</span>
                   <ArrowForwardIcon className="arrow-icon" />
                 </Button>
@@ -48,7 +62,7 @@ function Home() {
               <h2>Beds Availability</h2>
               <p>If you are looking for the current status of beds in specific departments or units, use the "Bed Availability" button. This feature allows you to find vacant beds in the hospital quickly and conveniently.</p>
               <div className="button-wrapper">
-                <Button className='homeButtons'>
+                <Button className='homeButtons' onClick={handleBedAvlClick}>
                   <span className="button-text">Click</span>
                   <ArrowForwardIcon className="arrow-icon" />
                 </Button>

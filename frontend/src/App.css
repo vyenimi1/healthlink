@@ -8,8 +8,8 @@ body {
 }
 
 .MuiButton-containedPrimary {
-  background-color: #337b24 !important; /* Change the background color */
-  color: #fff; /* Change the text color */
+  background-color: #337b24 !important; 
+  color: #fff;
   font-weight: bold;
   margin: 10px !important;
 }

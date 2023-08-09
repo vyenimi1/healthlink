@@ -8,8 +8,9 @@ import {
   TextField,
   Grid,
 } from '@mui/material';
+import { addDoctor } from '../Services/HospitalServices';
 
-const AddDoctor = ({ open, onClose }) => {
+const AddDoctor = ({ open, onClose, hospitalId }) => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -22,6 +23,7 @@ const AddDoctor = ({ open, onClose }) => {
     languagesKnown: '',
     consultationHours: '',
     availabilityDays: '',
+    hospitalId: hospitalId
   });
 
   const handleChange = (event) => {
@@ -34,6 +36,15 @@ const AddDoctor = ({ open, onClose }) => {
 
   const handleSave = () => {
     console.log('New doctor data:', formData);
+    addDoctor(formData).then((res) =>{
+      let results = res.data;
+      if (results) {
+        console.log('Doctor Added', results);
+        window.location.reload();
+      }
+    }).catch((error) => {
+      console.error('Error While adding doctor:', error);
+    });
     onClose();
   };
 
@@ -78,6 +89,7 @@ const AddDoctor = ({ open, onClose }) => {
               fullWidth
               label="Age"
               name="age"
+              type='number'
               value={formData.age}
               onChange={handleChange}
             />
@@ -96,6 +108,7 @@ const AddDoctor = ({ open, onClose }) => {
               fullWidth
               label="Contact Number"
               name="contactNumber"
+              type='tel'
               value={formData.contactNumber}
               onChange={handleChange}
             />
@@ -105,6 +118,7 @@ const AddDoctor = ({ open, onClose }) => {
               fullWidth
               label="Email Address"
               name="emailAddress"
+              type='email'
               value={formData.emailAddress}
               onChange={handleChange}
             />
@@ -114,6 +128,7 @@ const AddDoctor = ({ open, onClose }) => {
               fullWidth
               label="Years of Experience"
               name="yearsOfExperience"
+              type='number'
               value={formData.yearsOfExperience}
               onChange={handleChange}
             />
@@ -141,6 +156,7 @@ const AddDoctor = ({ open, onClose }) => {
               fullWidth
               label="Availability Days"
               name="availabilityDays"
+              type='number'
               value={formData.availabilityDays}
               onChange={handleChange}
             />

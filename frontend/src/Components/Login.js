@@ -8,7 +8,7 @@ import Switch from '@mui/material/Switch';
 import "./Login.css";
 
 
-import { LoginHostipal, LoginUsers } from '../Services/HospitalServices';
+import { LoginHospital, LoginUsers } from '../Services/HospitalServices';
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -49,10 +49,12 @@ function Login() {
       return;
     }
     if (isHospitalLogin) {
-      LoginHostipal(formData).then((res) =>{
+      LoginHospital(formData).then((res) =>{
         let results = res.data;
         if (results) {
-          console.log('Logged in as hospital:', results);
+          const hospitalId = results.hospitalId;
+          console.log('Logged in as hospital:', results, hospitalId);
+          navigate("/dashboard/"+hospitalId);
         }
       }).catch((error) => {
         console.error('Error logging in as hospital:', error);
@@ -61,7 +63,9 @@ function Login() {
       LoginUsers(formData).then((res) =>{
         let results = res.data;
         if (results) {
+          const userId = results.userId;
           console.log('Logged in as hospital:', results);
+          navigate("/dashboard-user/"+userId)
         }
       }).catch((error) => {
         console.error('Error logging in as hospital:', error);
@@ -76,7 +80,7 @@ function Login() {
   return (
     <div>
       <div className="login-container">
-        <form className="login-form" onSubmit={handleSubmit} noValidate autoComplete="off">
+        <form className="login-form signup-form" onSubmit={handleSubmit} noValidate autoComplete="off">
           {
             isHospitalLogin ? <h2>Login As Hospital</h2> : <h2>Login As Customer</h2>
           }
@@ -86,6 +90,7 @@ function Login() {
                 fullWidth
                 label="Email"
                 name="email"
+                type='email'
                 value={formData.email}
                 onChange={handleChange}
                 error={!!errors.email}

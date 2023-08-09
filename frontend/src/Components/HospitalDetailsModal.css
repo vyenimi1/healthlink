@@ -1,0 +1,38 @@
+/* HospitalDetailsModal.css */
+
+.modal-paper {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-details {
+  margin-bottom: 20px;
+}
+
+.contact-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.appointment-text {
+  margin-bottom: 16px;
+}
+
+.book-appointment-btn {
+  margin-top: 8px;
+}

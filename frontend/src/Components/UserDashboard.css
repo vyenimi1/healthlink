@@ -1,0 +1,15 @@
+.dashboard-container {
+    width: 80% !important;
+    height: 100%;
+    margin: 80px auto 0;
+  }
+  
+.dashboard-head{
+    text-align-last: center;
+    font-weight: 800 !important;
+}
+
+.dashboard-body{
+    text-align-last: center;
+}
+  

@@ -146,6 +146,7 @@ const navigate = useNavigate();
                 fullWidth
                 label="Email ID"
                 name="emailId"
+                type='email'
                 value={formData.emailId}
                 onChange={handleChange}
                 error={!!errors.emailId}

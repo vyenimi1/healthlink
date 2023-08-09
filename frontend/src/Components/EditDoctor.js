@@ -8,8 +8,9 @@ import {
   TextField,
 } from '@mui/material';
 import "./EditDoctor.css"
+import { updateDoctor } from '../Services/HospitalServices';
 
-const EditModal = ({ open, onClose, doctor }) => {
+const EditModal = ({ open, onClose, doctor, doctorId }) => {
   const [formData, setFormData] = useState(doctor);
 
   const handleChange = (event) => {
@@ -21,14 +22,15 @@ const EditModal = ({ open, onClose, doctor }) => {
   };
 
   const handleSubmit = () => {
-    // Call the API to update the doctor data with formData
-    // For example:
-    // try {
-    //   await axios.put(`/updateDoctor/${doctor.id}`, formData);
-    //   onClose();
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    updateDoctor(formData,doctorId).then((res) =>{
+      let results = res.data;
+      if (results) {
+        console.log('Doctor Added', results);
+        window.location.reload();
+      }
+    }).catch((error) => {
+      console.error('Error While adding doctor:', error);
+    });
     onClose();
   };
 
@@ -40,15 +42,15 @@ const EditModal = ({ open, onClose, doctor }) => {
           <TextField
             fullWidth
             label="First Name"
-            name="first_name"
-            value={formData.first_name}
+            name="firstName"
+            value={formData.firstName}
             onChange={handleChange}
           />
           <TextField
             fullWidth
             label="Last Name"
-            name="last_name"
-            value={formData.last_name}
+            name="lastName"
+            value={formData.lastName}
             onChange={handleChange}
           />
           <TextField
@@ -76,44 +78,47 @@ const EditModal = ({ open, onClose, doctor }) => {
           <TextField
             fullWidth
             label="Contact Number"
-            name="contact_number"
-            value={formData.contact_number}
+            name="contactNumber"
+            type='tel'
+            value={formData.contactNumber}
             onChange={handleChange}
           />
           <TextField
             fullWidth
             label="Email Address"
-            name="email_address"
-            value={formData.email_address}
+            name="emailAddress"
+            type='email'
+            value={formData.emailAddress}
             onChange={handleChange}
           />
           <TextField
             fullWidth
             label="Years of Experience"
-            name="years_of_experience"
+            name="yearsOfExperience"
             type="number"
-            value={formData.years_of_experience}
+            value={formData.yearsOfExperience}
             onChange={handleChange}
           />
           <TextField
             fullWidth
             label="Languages Known"
-            name="languages_known"
-            value={formData.languages_known}
+            name="languagesKnown"
+            value={formData.languagesKnown}
             onChange={handleChange}
           />
           <TextField
             fullWidth
             label="Consultation Hours"
-            name="consultation_hours"
-            value={formData.consultation_hours}
+            name="consultationHours"
+            value={formData.consultationHours}
             onChange={handleChange}
           />
           <TextField
             fullWidth
             label="Availability Days"
-            name="availability_days"
-            value={formData.availability_days}
+            name="availabilityDays"
+            type='number'
+            value={formData.availabilityDays}
             onChange={handleChange}
           />
         </form>
