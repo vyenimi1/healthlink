@@ -38,6 +38,8 @@ Customer login:
 Username: user1@email.com
 Password: password123
 
+Or otherwise you can choose to signup and create hospital account and customer account and use those credentials to login
+
 
 
 
