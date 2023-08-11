@@ -84,62 +84,7 @@ class HospitalServiceImplTest {
     }
 
 
-   /* @Test
-    void testCreateHospitalAccount() {
-        // Create a test HospitalAccountRequest
-        HospitalAccountRequest request = new HospitalAccountRequest();
-        request.setPassword("password123");
-        request.setName("Test Hospital");
-        request.setStreet("123 Main St");
-        request.setZipCode(12345L);
-        request.setCity("Cityville");
-        request.setState("Stateville");
-        request.setContactNumber("1234567890");
-        request.setEmail("hospital@example.com");
-        request.setWebsite("www.testhospital.com");
-        request.setLabFacility("Available");
-        request.setInsuranceAcceptance("Accepted");
-        request.setScanningFacility("Available");
-
-        // Create a test HospitalAccount
-        HospitalAccount testHospitalAccount = new HospitalAccount();
-        testHospitalAccount.setHospitalId(1L); // Assuming hospital ID generated after save
-        testHospitalAccount.setPassword("password123");
-        testHospitalAccount.setName("Test Hospital");
-        testHospitalAccount.setStreet("123 Main St");
-        testHospitalAccount.setZipCode(12345L);
-        testHospitalAccount.setCity("Cityville");
-        testHospitalAccount.setState("Stateville");
-        testHospitalAccount.setContactNumber("1234567890");
-        testHospitalAccount.setEmail("hospital@example.com");
-        testHospitalAccount.setWebsite("www.testhospital.com");
-        testHospitalAccount.setLabFacility("Available");
-        testHospitalAccount.setInsuranceAcceptance("Accepted");
-        testHospitalAccount.setScanningFacility("Available");
-
-        // Mock repository and service behavior
-        when(hospitalRepository.saveAndFlush(any(HospitalAccount.class))).thenReturn(testHospitalAccount);
-        //when(hospitalEntity.getHospitalId()).thenReturn(1L); // Assuming hospital ID generated after save
-
-        // Call the method
-        HospitalResponse response = hospitalService.createHospitalAccount(request);
-
-        // Assertions
-        assertNotNull(response);
-        assertEquals("Test Hospital", response.getName());
-        assertEquals("123 Main St", response.getStreet());
-        assertEquals(12345L, response.getZipCode());
-        assertEquals("Cityville", response.getCity());
-        assertEquals("Stateville", response.getState());
-        assertEquals("1234567890", response.getContactNumber());
-        assertEquals("hospital@example.com", response.getEmail());
-        assertEquals("www.testhospital.com", response.getWebsite());
-        assertEquals("Available", response.getLabFacility());
-        assertEquals("Accepted", response.getInsuranceAcceptance());
-        assertEquals("Available", response.getScanningFacility());
-        // Add more assertions for other properties...
-    }
-*/
+  
 
     @Test
     void testConstructHospitalResponse() {
